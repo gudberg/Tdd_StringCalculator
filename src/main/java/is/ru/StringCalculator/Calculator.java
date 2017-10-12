@@ -16,13 +16,14 @@ public class Calculator {
 				return sum(numbers);
 			}
 			return 1;
-		}
+		     }	
 	}
 
 	private static int toInt(String number)
 	{
-			return Integer.parseInt(number);
+		return Integer.parseInt(number);
 	}
+
 	private static int sum(String [] numbers)
 	{
 			int total = 0;

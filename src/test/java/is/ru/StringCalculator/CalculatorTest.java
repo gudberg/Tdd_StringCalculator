@@ -24,4 +24,16 @@ public class CalculatorTest {
 	public void testNewLine() {
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
+
+	@Test
+	public void testNegatives() {
+    	try {
+    	    Calculator.add("-4,-5");
+					junit.framework.Assert.fail("Negatives not allowed");
+    	}
+    	catch (IllegalArgumentException exception) {
+					final String expectedOutcome = "Negatives not allowed: [-4, -5]";
+					assertEquals(expectedOutcome, exception.getMessage());
+    	}
+	}
 }

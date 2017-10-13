@@ -24,7 +24,6 @@ public class CalculatorTest {
 	public void testNewLine() {
 		assertEquals(6, Calculator.add("1\n2,3"));
 	}
-
 	@Test
 	public void testNegatives() {
     	try {
@@ -35,5 +34,9 @@ public class CalculatorTest {
 					final String expectedOutcome = "Negatives not allowed: [-4, -5]";
 					assertEquals(expectedOutcome, exception.getMessage());
     	}
+	}
+	@Test
+	public void TestforNumbersHigherThanThousand(){
+		assertEquals(2, Calculator.add("1001,2"));
 	}
 }

@@ -37,6 +37,10 @@ public class Calculator {
 				{
 					negativeNumbers.add(eachNumber);
 				}
+				if(eachNumber > 1000)
+				{
+					continue;
+				}
 				total += eachNumber;
 			}
 			if(negativeNumbers.size() > 0) //If there is one negative number then exception is thrown

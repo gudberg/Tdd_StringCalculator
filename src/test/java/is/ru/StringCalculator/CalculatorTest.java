@@ -36,7 +36,11 @@ public class CalculatorTest {
     	}
 	}
 	@Test
-	public void TestforNumbersHigherThanThousand(){
+	public void testforNumbersHigherThanThousand(){
 		assertEquals(2, Calculator.add("1001,2"));
+	}
+	@Test
+	public void testDelimiter(){
+		assertEquals(3, Calculator.add("//;\n1;2"));
 	}
 }
